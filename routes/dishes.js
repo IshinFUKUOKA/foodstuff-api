@@ -27,7 +27,7 @@ router.get('/:dish', function(req, res, next) {
 router.post('/', function(req, res, next) {
   let dishName = req.body.name;
   let dishExpiration = req.body.expiration;
-  console.log("request.params: { name: "  + dishName + ", expiration:" + dishExpiration);
+  console.log("request.params: { name: "  + dishName + ", expiration:" + dishExpiration + " }");
   if(!dishName || !dishExpiration) {
     res.status(400).send("Missing parameters.");
   }
