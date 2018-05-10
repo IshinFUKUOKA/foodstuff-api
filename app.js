@@ -10,7 +10,6 @@ var indexRouter = require('./routes/index');
 var dishesRouter = require('./routes/dishes');
 
 var app = express();
-var path = __dirname + '/app.js';
 
 var isProduction = process.env.NODE_ENV === 'production';
 
@@ -25,7 +24,6 @@ if (!isProduction) {
 
 app.use('/', indexRouter);
 app.use('/dishes', dishesRouter);
-app.use(reload(path))
 
 app.use(bodyParser.urlencoded({
     extended: true
